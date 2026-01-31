@@ -5,7 +5,7 @@ const Register = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro | SingUp</title>
+        <title>My Portfolio | SingUp</title>
       </Helmet>
 
       <div className="hero bg-base-200 min-h-screen ">
