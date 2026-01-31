@@ -7,29 +7,26 @@ const NavBar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/menu">Our Menu</Link>
+        <Link>About</Link>
       </li>
       <li>
-        <Link to="/order/salad">Our Shop</Link>
+        <Link>Projects</Link>
       </li>
       <li>
-        <Link to='/contact'>Contact Us</Link>
+        <Link>Blogs</Link>
       </li>
       <li>
-        <Link to="/secret">Secret</Link>
+        <Link to="/contact">Contact </Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
-      </li>
-      <li>
-        <Link to="/singUp">SingUp</Link>
+        <Link>Dashboard</Link>
       </li>
     </>
   );
 
   return (
     <>
-      <div className="navbar fixed z-10 bg-black bg-opacity-30 text-white max-w-screen-lg">
+      <div className="navbar mt-15 fixed z-10 bg-black bg-opacity-30 text-white max-w-screen-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,16 +49,23 @@ const NavBar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <div className="text-blue-400">{NavOptions} </div>
+              <div className="text-blue-400 font-bold">{NavOptions} </div>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Bistro Boss</a>
+          <a className="btn btn-ghost text-xl ">Mojahid</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{NavOptions}</ul>
+          <ul className="menu menu-horizontal px-1 font-bold">{NavOptions}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Get Stated</a>
+        <div className="navbar-end ">
+          <div classNma="flex ">
+            <button className="font-bold">
+              <Link to="/login">Login</Link>
+            </button>
+            <button className="btn btn-active btn-accent rounded-lg ml-3 font-bold">
+              <Link to="/singUp">Register</Link>
+            </button>
+          </div>
         </div>
       </div>
     </>

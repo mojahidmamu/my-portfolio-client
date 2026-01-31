@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import SingUpImage from "../../assets/others/authentication1.png";
+import SingUpImage from "../../assets/home/authentication1.png";
 
 const SingUp = () => {
   return (

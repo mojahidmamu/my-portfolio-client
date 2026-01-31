@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import LoginImage from "../../assets/others/authentication2.png";
+import LoginImage from "../../assets/home/authentication2.png";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
