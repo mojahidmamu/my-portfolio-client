@@ -26,7 +26,14 @@ Built with **React.js** and **Prisma**, it demonstrates modern web development p
 ---
 
 ## 📂 Project Structure
-
+my-portfolio-client/
+├── public/ # Static assets like images, icons, fonts
+├── pages/ # React.js pages (Home, About, Projects, Contact, etc.)
+├── components/ # Reusable React components (Navbar, Footer, ProjectCard, etc.)
+├── styles/ # Tailwind CSS or custom CSS files
+├── package.json # Project dependencies and scripts
+├── tailwind.config.js # Next.js configuration
+└── README.md # Project documentation
 
 🌐 Deployment
 Deploy using Vercel for a seamless React.js experience.
