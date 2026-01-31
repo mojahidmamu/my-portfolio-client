@@ -26,24 +26,23 @@ const BuildTogether = () => {
           updates and <br /> exclusive development tips. No scam, only value.
         </p>
       </div>
-      <div className="flex">
-        {/* Email */}
+      <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl mx-auto my-10">
+        {/* Email Input */}
         <input
           type="email"
           name="email"
           placeholder="name@example.com"
-          //   value={formData.email}
-          //   onChange={handleChange}
           required
-          className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+          className="flex-1 p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white 
+               focus:outline-none focus:ring-2 focus:ring-purple-500 transition placeholder-gray-400"
         />
-
-        {/* Submit Button */}
+        {/* Subscribe Button */}
         <button
           type="submit"
-          className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-105"
+          className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 
+               text-white font-bold py-4 px-8 rounded-xl shadow-lg transition transform hover:scale-105"
         >
-          Subcribe
+          Subscribe
         </button>
       </div>
     </div>

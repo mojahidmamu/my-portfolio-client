@@ -10,7 +10,7 @@ const faqsData = [
   },
   {
     id: 2,
-    question: "Do I need to create an account?",
+    question: "Do you need to create an account?",
     answer:
       "No account is required. You can explore everything freely without signing up.",
   },
