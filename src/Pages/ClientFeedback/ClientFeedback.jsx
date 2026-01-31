@@ -20,7 +20,9 @@ const ClientFeedback = () => {
 
         {/* Subtitle */}
         <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg">
-          <span className="italic">"Quality means doing it right when no one is looking."</span>{" "}
+          <span className="italic">
+            "Quality means doing it right when no one is looking."
+          </span>{" "}
           --- Here is what <br /> they say about my work
         </p>
       </div>
