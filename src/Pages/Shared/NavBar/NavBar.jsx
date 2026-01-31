@@ -7,19 +7,19 @@ const NavBar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link>About</Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <Link>Projects</Link>
+        <Link to="/projects">Projects</Link>
       </li>
       <li>
-        <Link>Blogs</Link>
+        <Link to="/blogs">Blogs</Link>
       </li>
       <li>
         <Link to="/contact">Contact </Link>
       </li>
       <li>
-        <Link>Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </li>
     </>
   );
@@ -63,7 +63,7 @@ const NavBar = () => {
               <Link to="/login">Login</Link>
             </button>
             <button className="btn btn-active btn-accent rounded-lg ml-3 font-bold">
-              <Link to="/singUp">Register</Link>
+              <Link to="/register">Register</Link>
             </button>
           </div>
         </div>
