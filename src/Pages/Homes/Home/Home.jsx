@@ -3,9 +3,10 @@ import BannerSection from "../../Banner/BannerSection";
 import AboutMe from "../../AboutMe/AboutMe";
 import MySkill from "../../MySkill/MySkill";
 import Projects from "../../Projects/Projects";
-import ClientFeedback from "../../ClientFeedback/ClientFeedback"; 
+import ClientFeedback from "../../ClientFeedback/ClientFeedback";
 import Contact from "../../Contact/Contact";
 import BuildTogether from "../../BuildTogether/BuildTogether";
+import FAQ from "../../FAQ/FAQ";
 
 const Home = () => {
   return (
@@ -19,10 +20,10 @@ const Home = () => {
       <AboutMe></AboutMe>
       <MySkill></MySkill>
       <Projects></Projects>
-      <ClientFeedback></ClientFeedback> 
+      <ClientFeedback></ClientFeedback>
+      <FAQ></FAQ>
       <Contact></Contact>
       <BuildTogether></BuildTogether>
-
     </div>
   );
 };
