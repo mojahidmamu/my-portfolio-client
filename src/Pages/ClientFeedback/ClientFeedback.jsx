@@ -1,4 +1,7 @@
 import { Star, Quote } from "lucide-react";
+import Client1 from "../../assets/People/images2.jpg";
+import Client2 from "../../assets/People/images3.jpg";
+import Client3 from "../../assets/People/images.jpeg";
 
 const ClientFeedback = () => {
   return (
@@ -28,7 +31,7 @@ const ClientFeedback = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 lg:px-20">
-        {/* ---------------- Card 1 ---------------- */}
+        {/* Card 1 - */}
         <div
           className="group relative p-8 sm:p-10 rounded-[2.5rem] 
           bg-white dark:bg-gray-800 
@@ -57,7 +60,7 @@ const ClientFeedback = () => {
           <div className="flex items-center gap-4 mt-4 border-t border-gray-100 dark:border-gray-700 pt-6">
             <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-purple-50 dark:ring-purple-900/20">
               <img
-                src="/avatar1.jpg"
+                src={Client1}
                 alt="John Doe"
                 className="w-full h-full object-cover rounded-full"
               />
@@ -73,7 +76,7 @@ const ClientFeedback = () => {
           </div>
         </div>
 
-        {/* ---------------- Card 2 ---------------- */}
+        {/* Card 2 */}
         <div
           className="group relative p-8 sm:p-10 rounded-[2.5rem] 
           bg-white dark:bg-gray-800 
@@ -98,7 +101,7 @@ const ClientFeedback = () => {
           <div className="flex items-center gap-4 mt-4 border-t border-gray-100 dark:border-gray-700 pt-6">
             <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-purple-50 dark:ring-purple-900/20">
               <img
-                src="/avatar2.jpg"
+                src={Client2}
                 alt="Sarah Smith"
                 className="w-full h-full object-cover rounded-full"
               />
@@ -114,7 +117,7 @@ const ClientFeedback = () => {
           </div>
         </div>
 
-        {/* ---------------- Card 3 ---------------- */}
+        {/* Card 3*/}
         <div
           className="group relative p-8 sm:p-10 rounded-[2.5rem] 
           bg-white dark:bg-gray-800 
@@ -139,7 +142,7 @@ const ClientFeedback = () => {
           <div className="flex items-center gap-4 mt-4 border-t border-gray-100 dark:border-gray-700 pt-6">
             <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-purple-50 dark:ring-purple-900/20">
               <img
-                src="/avatar3.jpg"
+                src={Client3}
                 alt="Michael Lee"
                 className="w-full h-full object-cover rounded-full"
               />
@@ -154,6 +157,7 @@ const ClientFeedback = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
