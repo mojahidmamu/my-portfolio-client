@@ -3,9 +3,9 @@ import NavLogo from "../../../assets/People/logo.png";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
-  const [theme, setTheme] = useState("light"); // default theme
+  const [theme, setTheme] = useState("light");
 
-  // Apply theme to <html>
+  // Apply theme to <html> so Tailwind dark classes work
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -14,9 +14,7 @@ const NavBar = () => {
     }
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   const NavOptions = (
     <>
@@ -125,13 +123,14 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-end flex items-center space-x-3">
-          {/* Theme toggle button */}
+          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             className="ml-3 p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
           >
             {theme === "light" ? "🌞" : "🌙"}
           </button>
+
           <Link
             to="/login"
             className="font-bold text-gray-100 hover:text-purple-400 transition-colors duration-200"

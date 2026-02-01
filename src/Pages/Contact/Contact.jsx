@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const contactItems = [
-  { icon: <FaPhone />, text: "+8801844797780", label: "Call me" },
+  {
+    icon: <FaLinkedin />,
+    text: "Mojahid-mamu",
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/abdullah-all-mojahid-a8a57b329",
+  },
   {
     icon: <FaEnvelope />,
     text: "abdullahallmojahidstudent@gmail.com",
     label: "Email me",
   },
+  { icon: <FaPhone />, text: "+8801844797780", label: "Call me" },
   {
     icon: <FaMapMarkerAlt />,
     text: "Cox's Bazar, Bangladesh",
@@ -71,9 +82,9 @@ const Contact = () => {
                 {/* Icon Box */}
                 <div
                   className="w-12 h-12 mt-3 flex items-center justify-center rounded-2xl 
-              bg-teal-500/10 text-teal-500
-              group-hover:bg-teal-500 group-hover:text-white
-              transition-all duration-300"
+            bg-teal-500/10 text-teal-500
+            group-hover:bg-teal-500 group-hover:text-white
+            transition-all duration-300"
                 >
                   {item.icon}
                 </div>
@@ -83,9 +94,20 @@ const Contact = () => {
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-500/70">
                     {item.label}
                   </p>
-                  <p className="font-medium text-slate-800 dark:text-white">
-                    {item.text}
-                  </p>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-slate-800 dark:text-white hover:text-teal-500 transition-colors duration-200"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <p className="font-medium text-slate-800 dark:text-white">
+                      {item.text}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
