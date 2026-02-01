@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { FaDownload, FaGithub } from "react-icons/fa";
 import Profile from "../../assets/home/Profile-image.jpg";
+import myCV from "../../assets/home/NID.pdf"
 
 const techStack = [
   "React",
@@ -17,130 +18,118 @@ const techStack = [
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
       <Helmet>
         <title>My Portfolio | About</title>
       </Helmet>
-      {/* Parent Div */}
-      <div>
-        {/* First Div */}
-        <div>
-          {/* Left Side: Profile Image */}
+
+      {/*  FLEX SECTION  */}
+      <div className="flex flex-col md:flex-row items-center gap-12 max-w-7xl mx-auto px-6 py-16">
+        {/*  LEFT — IMAGE   */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="md:w-5/12 flex justify-center relative"
+        >
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="md:w-5/12 flex justify-center relative"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity }}
+            className="relative group"
           >
-            {/* Floating Animation Wrapper */}
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative group"
-            >
-              {/* Spinning Gradient Border */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-purple-500 via-primary to-green-500 rounded-full blur-md opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-500 animate-spin-slow"></div>
+            {/* spinning gradient */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-purple-500 via-indigo-500 to-green-400 rounded-full blur-md opacity-40 group-hover:opacity-90 transition duration-700 animate-spin-slow"></div>
 
-              {/* Profile Image Container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-2xl z-10">
-                <img
-                  src={Profile}
-                  alt="Abdullah all Mojahid"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  priority
-                />
-              </div>
+            {/* image */}
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
+              <img
+                src={Profile}
+                alt="Abdullah all Mojahid"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+            </div>
 
-              {/* Pulsing Decorative Ring */}
-              <div className="absolute inset-0 rounded-full ring-8 ring-primary/20 animate-pulse z-0"></div>
-            </motion.div>
+            {/* pulse ring */}
+            <div className="absolute inset-0 rounded-full ring-8 ring-indigo-500/20 animate-pulse"></div>
           </motion.div>
-        </div>
-        {/* Second Div */}
-        {/* Header */}
-        <div className="text-center space-y-4 mb-12">
-          {/* Title */}
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            <span className="text-slate-900 dark:text-white">About </span>
-            <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
-              Me
-            </span>
-          </h2>
+        </motion.div>
 
-          {/* Underline */}
-          <div className="flex justify-center">
-            <span className="h-1 w-28 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500"></span>
+        {/*   RIGHT — CONTENT   */}
+        <div className="md:w-7/12 w-full">
+          {/* Header */}
+          <div className="space-y-4 mb-10">
+            <h2 className="text-4xl md:text-5xl font-extrabold">
+              <span className="text-slate-900 dark:text-white">About </span>
+              <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
+                Me
+              </span>
+            </h2>
+
+            <div className="h-1 w-28 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500"></div>
+
+            <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg">
+              I am a passionate{" "}
+              <span className="font-bold underline underline-offset-4 decoration-indigo-500/60">
+                Full-Stack Developer
+              </span>{" "}
+              dedicated to building modern, scalable and secure web
+              applications.
+            </p>
           </div>
 
-          {/* Subtitle */}
-          <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg">
-            Iam a passionate{" "}
-            <span className="text-foreground font-bold underline underline-offset-4 decoration-primary/50">
-              Full-Stack Developer
-            </span>{" "}
-            dedicated to building modern, scalable and secure web applications.
-          </p>
-        </div>
-
-        {/* Cart and Button */}
-        <div className="w-full max-w-6xl mx-auto p-6">
-          {/* Stats Cards with Staggered Animation */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full mb-12">
+          {/*   Stats Cards  */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
             {[
               {
                 label: "Projects Done",
-                value: "30+",
+                value: "25+",
                 color: "from-blue-500/20 to-blue-600/5",
-                textColor: "text-blue-500",
+                text: "text-blue-600",
               },
               {
                 label: "Experience",
-                value: "2+ Years",
+                value: "1+ Years",
                 color: "from-green-500/20 to-green-600/5",
-                textColor: "text-green-500",
+                text: "text-green-600",
               },
               {
                 label: "Happy Clients",
-                value: "100+",
+                value: "30+",
                 color: "from-purple-500/20 to-purple-600/5",
-                textColor: "text-purple-500",
+                text: "text-purple-600",
               },
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.85 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className={`bg-gradient-to-br ${stat.color} border border-primary/10 rounded-2xl p-6 backdrop-blur-md shadow-sm`}
+                transition={{ delay: i * 0.15 }}
+                whileHover={{ y: -8 }}
+                className={`bg-gradient-to-br ${stat.color} border border-indigo-200/30 rounded-2xl p-6 backdrop-blur-md shadow-sm`}
               >
-                <h3 className={`text-3xl font-bold ${stat.textColor}`}>
+                <h3 className={`text-2xl font-bold ${stat.text}`}>
                   {stat.value}
                 </h3>
-                <p className="text-muted-foreground text-xs font-bold mt-1 uppercase tracking-widest">
+                <p className="text-xs font-bold mt-1 uppercase tracking-widest text-slate-500">
                   {stat.label}
                 </p>
               </motion.div>
             ))}
           </div>
 
-          {/* Tech Stack Tags */}
-          <div className="space-y-4 w-full mb-12">
-            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-primary/70">
+          {/* Tech Stack  */}
+          <div className="space-y-4 mb-12">
+            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-indigo-500">
               Technical Prowess
             </h4>
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              {techStack.map((tech, index) => (
+
+            <div className="flex flex-wrap gap-3">
+              {techStack.map((tech, i) => (
                 <motion.span
-                  key={index}
-                  whileHover={{
-                    scale: 1.1,
-                    backgroundColor: "var(--primary)",
-                    color: "var(--primary-foreground)",
-                  }}
-                  className="px-5 py-2 bg-secondary/50 text-secondary-foreground border border-primary/5 rounded-full text-xs font-bold transition-all cursor-default backdrop-blur-sm"
+                  key={i}
+                  whileHover={{ scale: 1.08 }}
+                  className="px-5 py-2 bg-slate-200/60 dark:bg-slate-800/60 border border-slate-300/30 rounded-full text-xs font-semibold backdrop-blur-sm hover:bg-indigo-600 hover:text-white transition"
                 >
                   {tech}
                 </motion.span>
@@ -148,25 +137,38 @@ const AboutMe = () => {
             </div>
           </div>
 
-          {/* Action Buttons */}
+          {/*  Buttons   */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-wrap gap-4 justify-center md:justify-start pt-6"
+            transition={{ delay: 0.5 }}
+            className="flex flex-wrap gap-4"
           >
+            {/* Download */}
             <a
-              // href="/Sharifa_Resume.pdf"
+              href={myCV}
               download
-              className="flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all transform hover:-translate-y-1 active:scale-95"
+              className="flex items-center gap-3 
+  bg-gradient-to-r from-indigo-600 to-purple-600
+  text-white px-8 py-4 rounded-full font-semibold
+  shadow-lg hover:shadow-purple-500/40
+  hover:-translate-y-1 transition-all duration-300"
             >
               <FaDownload /> Download CV
             </a>
+
+            {/* Github */}
             <a
               href="https://github.com/mojahidmamu"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-secondary/80 text-secondary-foreground border border-primary/20 px-10 py-4 rounded-full font-bold hover:bg-foreground hover:text-background transition-all transform hover:-translate-y-1"
+              className="flex items-center gap-3 
+              bg-white/10 backdrop-blur-md
+              border border-slate-300/40
+              text-slate-800 dark:text-white
+              px-8 py-4 rounded-full font-semibold
+              hover:bg-black hover:text-white
+              hover:-translate-y-1 transition-all duration-300"
             >
               <FaGithub className="text-xl" /> GitHub
             </a>

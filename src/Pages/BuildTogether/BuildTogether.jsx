@@ -26,7 +26,7 @@ const BuildTogether = () => {
           updates and <br /> exclusive development tips. No scam, only value.
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl mx-auto my-10">
+      <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl mx-auto my-20">
         {/* Email Input */}
         <input
           type="email"
