@@ -16,13 +16,13 @@ import {
 
 const subtitles = [
   "a Full Stack Developer |",
-  "a MERN Stack Developer |",
-  "a Next JS Developer |",
+  "a Competitive Programmer |",
   "a Front End Developer |",
   "a Web Developer |",
+  "a Problem Solver |",
   "a React JS Developer |",
-  "a TypeScript Developer |",
   "a Dedicated Learner |",
+  "a MERN Stack Developer |",
   "a Technology Enthusiast |",
   "a Backend Developer",
 ];
