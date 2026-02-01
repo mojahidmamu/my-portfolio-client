@@ -19,7 +19,7 @@ const BuildTogether = () => {
 
     // Simulate API call
     setTimeout(() => {
-      alert(`🎉 Welcome aboard, ${email} ! Check your inbox for updates.`);
+      alert(`🎉 Welcome aboard, ${email} ! ✅ Check your inbox for updates.`);
       setStatus("success");
     }, 1000);
   };
