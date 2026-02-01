@@ -5,8 +5,16 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const contactItems = [
   { icon: <FaPhone />, text: "+8801844797780", label: "Call me" },
-  { icon: <FaEnvelope />, text: "abdullahallmojahidstudent@gmail.com", label: "Email me" },
-  { icon: <FaMapMarkerAlt />, text: "Cox's Bazar, Bangladesh", label: "Location" },
+  {
+    icon: <FaEnvelope />,
+    text: "abdullahallmojahidstudent@gmail.com",
+    label: "Email me",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    text: "Cox's Bazar, Bangladesh",
+    label: "Location",
+  },
 ];
 
 const Contact = () => {
@@ -50,20 +58,19 @@ const Contact = () => {
             <span className="h-1 w-28 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500"></span>
           </div>
 
-          <p className="text-slate-500 text-base md:text-lg max-w-md text-center md:text-left">
+          <p className="text-slate-500 text-base md:text-lg max-w-md text-center md:text-left mt-8">
             I specialize in React.js, Node.js, MongoDB. <br />
             Whatever project you have in mind, or just <br /> want to say hi, my
             inbox is always open!
           </p>
 
-          {/*  */}
           {/* Contact List */}
           <div className="space-y-6">
             {contactItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 group">
+              <div key={index} className="flex items-center gap-4 group mt-16">
                 {/* Icon Box */}
                 <div
-                  className="w-12 h-12 flex items-center justify-center rounded-2xl 
+                  className="w-12 h-12 mt-3 flex items-center justify-center rounded-2xl 
               bg-teal-500/10 text-teal-500
               group-hover:bg-teal-500 group-hover:text-white
               transition-all duration-300"

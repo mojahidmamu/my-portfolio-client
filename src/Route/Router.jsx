@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main"; 
 import Home from "../Pages/Homes/Home/Home";
 import AboutMe from "../Pages/AboutMe/AboutMe";
-import Projects from "../Pages/Projects/Projects";
-import FeautureBlog from "../Pages/FeautureBlog/FeautureBlog";
+import Projects from "../Pages/Projects/Projects"; 
 import Contact from "../Pages/Contact/Contact";
 import Dashboard from "../Layout/Dashboard";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import Blog from "../Pages/FeautureBlog/Blog";
+import BlogDetailsCard from "../Pages/FeautureBlog/BlogDetailsCard";
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ export const router = createBrowserRouter([
         },
         {
           path: "/blogs",
-          element: <FeautureBlog></FeautureBlog>
+          element: <Blog></Blog>,
+        },
+        {
+          path: "/blogs/:id",
+          element: <BlogDetailsCard></BlogDetailsCard>,
         },
         {
           path: "/contact",
