@@ -1,7 +1,23 @@
 import { Link } from "react-router-dom";
 import NavLogo from "../../../assets/People/logo.png";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const [theme, setTheme] = useState("light"); // default theme
+
+  // Apply theme to <html>
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   const NavOptions = (
     <>
       <li>
@@ -109,6 +125,13 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-end flex items-center space-x-3">
+          {/* Theme toggle button */}
+          <button
+            onClick={toggleTheme}
+            className="ml-3 p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
+          >
+            {theme === "light" ? "🌞" : "🌙"}
+          </button>
           <Link
             to="/login"
             className="font-bold text-gray-100 hover:text-purple-400 transition-colors duration-200"
