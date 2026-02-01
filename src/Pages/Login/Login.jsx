@@ -6,6 +6,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const capthchaRef = useRef(null);
@@ -87,7 +88,7 @@ const Login = () => {
                   onClick={handleValidateCaptcha}
                   className="btn btn-outline btn-xs mt-2"
                 >
-                  Validata  
+                  Validata
                 </button>
               </div>
               <div className="form-control mt-6">
@@ -99,8 +100,15 @@ const Login = () => {
                   Login
                 </button>
               </div>
-              <p className="text-gray-400 text-center">
-                New here? Create a New Account
+              {/*  */}
+              <p className="text-gray-400 text-center flex justify-center items-center gap-3">
+                {" "}
+                New here?{" "}
+                <span className="font-bold border rounded-md">
+                  <Link to="/register">
+                    <div className="divider"> Create a New Account</div>
+                  </Link>
+                </span>
               </p>
             </form>
             <div className="divider">Or sign in with</div>
