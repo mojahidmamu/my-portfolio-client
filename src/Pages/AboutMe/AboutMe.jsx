@@ -89,13 +89,13 @@ const AboutMe = () => {
               },
               {
                 label: "Experience",
-                value: "1+ Years",
+                value: "0+ Years",
                 color: "from-green-500/20 to-green-600/5",
                 text: "text-green-600",
               },
               {
                 label: "Happy Clients",
-                value: "30+",
+                value: "0+",
                 color: "from-purple-500/20 to-purple-600/5",
                 text: "text-purple-600",
               },

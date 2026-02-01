@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
+
 import {
   FaPhone,
   FaEnvelope,
@@ -35,16 +37,32 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-
+  
+  const [sent, setSent] = useState(false);
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    alert("✅ Message Sent Successfully !");
+
     console.log(formData);
-    alert("Form submitted! Check console for details.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    // show success UI
+    setSent(true);
+
+    // reset form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    // auto hide message after 4 sec
+    setTimeout(() => setSent(false), 4000);
   };
 
   return (
@@ -120,7 +138,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col gap-6"
           >
-            {/* Full Name */}
+            {/* Name */}
             <h5 className="font-bold mb-[-20px]">Name</h5>
             <input
               type="text"
@@ -157,7 +175,7 @@ const Contact = () => {
             />
 
             {/* Message */}
-            <h5 className="font-bold mb-[-20px]">Your Message </h5>
+            <h5 className="font-bold mb-[-20px]">Your Message</h5>
             <textarea
               name="message"
               placeholder="Tell me about your project..."
@@ -176,6 +194,25 @@ const Contact = () => {
               Send Message
             </button>
           </form>
+
+          {/* Success Message UI */}
+          {sent && (
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="flex gap-3 p-5 rounded-xl bg-green-50 border border-green-200 shadow-md mt-4"
+            >
+              <CheckCircle className="text-green-600" />
+              <div>
+                <p className="font-semibold text-green-700">
+                  Message sent successfully!
+                </p>
+                <p className="text-sm text-green-600">
+                  Thanks — I’ll reply soon.
+                </p>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </div>
