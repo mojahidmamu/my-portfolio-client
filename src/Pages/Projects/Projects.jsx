@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import ProjectCard from "./ProjectCard";
-import { projects } from "./projects";
+import { projectsData } from "./projectsData";
 
 const Projects = () => {
   return (
@@ -29,9 +29,8 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Import projects.js & create card */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((item) => (
+        {projectsData.map((item) => (
           <ProjectCard key={item.id} project={item} />
         ))}
       </div>

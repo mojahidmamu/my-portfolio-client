@@ -1,7 +1,6 @@
-// projects.js
 import img1 from "../../assets/home/progile-image-2.jpg";
 
-export const projects = [
+export const projectsData = [
   {
     id: 1,
     title: "Food Delivery App",
