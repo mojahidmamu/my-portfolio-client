@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { FaDownload, FaGithub } from "react-icons/fa";
 import Profile from "../../assets/home/Profile-image.jpg";
-import myCV from "../../assets/home/NID.pdf"
+import myCV from "../../assets/home/Abdullah_Al_Mojahid_Resume.pdf"
 
 const techStack = [
   "React",

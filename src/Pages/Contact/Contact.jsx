@@ -68,7 +68,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-20 px-6 md:px-12 lg:px-20 bg-gray-50 dark:bg-gray-900">
       <Helmet>
-        <title>My Portfolio | Contact</title>
+        <title>My Portfolio </title>
       </Helmet>
 
       {/* Flex container */}
