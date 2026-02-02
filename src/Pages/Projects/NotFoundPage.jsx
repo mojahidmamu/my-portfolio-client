@@ -48,7 +48,6 @@
 //           </button>
 //         </div>
 //       </div>
-
 //       {/* Subtle Background Pattern */}
 //       <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
 //     </section>

@@ -1,29 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
-import ProjectCard from "./ProjectCard"; 
-
-// Dummy projects data
-const projects = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    description: "My personal portfolio built with React and Tailwind CSS.",
-    image: "/project1.jpg",
-  },
-  {
-    id: 2,
-    title: "E-commerce App",
-    description: "A full-stack e-commerce app with cart and payment functionality.",
-    image: "/project2.jpg",
-  },
-  {
-    id: 3,
-    title: "Blog Platform",
-    description: "A blogging platform with authentication and CRUD features.",
-    image: "/project3.jpg",
-  },
-];
+import ProjectCard from "./ProjectCard";
+import { projects } from "./projects";
 
 const Projects = () => {
   return (
@@ -46,35 +24,17 @@ const Projects = () => {
         </div>
 
         <p className="max-w-2xl mx-auto text-slate-500 text-base md:text-lg">
-          A showcase of my recent works — built with modern technologies and clean UI/UX.
-          Explore the live demos or check the source code!
+          A showcase of my recent works — built with modern technologies and
+          clean UI/UX. Explore the live demos or check the source code!
         </p>
       </div>
 
-      {/* Projects Grid */}
-      {projects.length > 0 ? (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <ProjectCard {...project} />
-            </motion.div>
-          ))}
-        </div>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-muted rounded-3xl"
-        >
-          <p className="text-xl text-muted-foreground font-medium">No projects found.</p>
-          <p className="text-sm text-muted-foreground/60">Check back later or explore my GitHub!</p>
-        </motion.div>
-      )}
+      {/* Import projects.js & create card */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((item) => (
+          <ProjectCard key={item.id} project={item} />
+        ))}
+      </div>
     </section>
   );
 };

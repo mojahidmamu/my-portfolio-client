@@ -1,49 +1,74 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Github, ExternalLink } from "lucide-react";
 
-const ProjectCard = ({ title, description, image }) => {
-  const navigate = useNavigate();
-
-  const goTo404 = () => {
-    navigate("/404"); // Navigate to 404 page
-  };
-
+const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-transform transform hover:scale-105">
-      {/* Image */}
-      <div className="relative h-48 w-full">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
-      </div>
+    <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover"
+      />
 
-      {/* Content */}
-      <div className="p-4 flex-1 flex flex-col">
-        <h3 className="text-lg font-bold mb-1 text-gray-900 dark:text-white">
-          {title}
-        </h3>
-        <p className="text-gray-500 dark:text-gray-300 text-sm mb-4">
-          {description}
+      <div className="p-5 space-y-3">
+        <h3 className="text-xl font-bold">{project.title}</h3>
+
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          {project.description}
         </p>
 
-        {/* Buttons */}
-        <div className="mt-auto flex gap-2 flex-wrap">
-          <button
-            onClick={goTo404}
-            className="flex-1 bg-black text-white py-2 rounded-lg hover:opacity-90 transition"
+        <div className="flex flex-wrap gap-2">
+          {project.topics.map((topic, i) => (
+            <span
+              key={i}
+              className="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full"
+            >
+              {topic}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-3 pt-4">
+          {/* Live Demo */}
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+      flex-1 flex items-center justify-center gap-2
+      bg-gradient-to-r from-emerald-500 to-teal-500
+      hover:from-emerald-600 hover:to-teal-600
+      text-white py-2.5 rounded-xl
+      text-sm font-semibold
+      shadow-md hover:shadow-lg
+      transition-all duration-300
+      hover:-translate-y-0.5
+    "
           >
-            Live
-          </button>
-          <button
-            onClick={goTo404}
-            className="flex-1 bg-gray-100 dark:bg-gray-700 text-black dark:text-white py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+            <ExternalLink size={18} />
+            Live Demo
+          </a>
+
+          {/* GitHub Code */}
+          <a
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View Source Code"
+            className="
+      flex items-center justify-center
+      w-11 h-11
+      rounded-xl
+      border border-gray-200 dark:border-gray-700
+      bg-white dark:bg-gray-800
+      hover:bg-gray-900 hover:text-white
+      dark:hover:bg-white dark:hover:text-black
+      shadow-sm hover:shadow-md
+      transition-all duration-300
+      hover:-translate-y-0.5
+    "
           >
-            Frontend
-          </button>
-          <button
-            onClick={goTo404}
-            className="flex-1 bg-gray-100 dark:bg-gray-700 text-black dark:text-white py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition"
-          >
-            Backend
-          </button>
+            <Github size={20} />
+          </a>
         </div>
       </div>
     </div>
