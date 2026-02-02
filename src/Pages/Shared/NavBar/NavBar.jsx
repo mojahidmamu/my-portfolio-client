@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import NavLogo from "../../../assets/People/logo.png";
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("light");
@@ -126,9 +127,10 @@ const NavBar = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="ml-3 p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="ml-3 relative p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200"
           >
-            {theme === "light" ? "🌞" : "🌙"}
+            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-orange-500" />
+            <Moon className="absolute top-2 left-2 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-purple-400" />
           </button>
 
           <Link
