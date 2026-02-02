@@ -16,11 +16,22 @@ const ProjectCard = ({ project }) => {
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-2">
           {project.topics.map((topic, i) => (
             <span
               key={i}
-              className="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full"
+              className="
+        px-3 py-1 text-xs font-medium
+        rounded-full
+        border border-transparent
+        bg-gradient-to-r from-purple-400 via-pink-400 to-red-400
+        text-white
+        shadow-sm
+        hover:scale-105 hover:shadow-md
+        transition-all duration-300
+        cursor-default
+        dark:from-purple-600 dark:via-pink-600 dark:to-red-600
+      "
             >
               {topic}
             </span>
