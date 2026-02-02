@@ -69,4 +69,44 @@ export const projectsData = [
     live: "https://payoo-mfs-xi.vercel.app/",
     code: "https://github.com/mojahidmamu/Payoo-NAGAD",
   },
+  {
+    id: 7,
+    title: "Kids School",
+    description:
+      " “Empowering students from small age towards vision With the courage, Confidence, Creativity and Compassion to make  their Unique Contribution in a Diverse and Dynamic World.” ",
+    image: img1,
+    topics: ["HMTL", "CSS"],
+    live: "https://payoo-mfs-xi.vercel.app/",
+    code: "https://kids-school-ten.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "Pillars of “Bangladesh 2.0” ",
+    description:
+      " Idea , innovation , vision and challenges in New Bangladesh. ",
+    image: img1,
+    topics: ["HMTL", "CSS"],
+    live: "https://kids-school-ten.vercel.app/",
+    code: "hhttps://github.com/mojahidmamu/Bangladesh-2.0",
+  },
+  {
+    id: 9,
+    title: "AUCTION Gallery",
+    description:
+      "Bid in Unique Items from Around the World. Discover rare collectibles, luxury goods and vintage treasures in our curated auctions. ",
+    image: img1,
+    topics: ["HMTL", "CSS"],
+    live: "https://auction-gallery-project.vercel.app/",
+    code: "https://github.com/mojahidmamu/AUCTION-GALLERY",
+  },
+  {
+    id: 10,
+    title: "Subro Selon Project",
+    description:
+      "Bid in Unique Items from Around the World. Discover rare collectibles, luxury goods and vintage treasures in our curated auctions. ",
+    image: img1,
+    topics: ["HMTL", "CSS"],
+    live: "https://subro-selon.vercel.app/",
+    code: "https://github.com/mojahidmamu/subro-selon",
+  },
 ];
