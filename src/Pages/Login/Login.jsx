@@ -56,7 +56,7 @@ const Login = () => {
       .then((result) => {
         console.log("Google User:", result.user);
         alert(
-          `✅ Welcome ${result.user.displayName}. You have successfully logged in Google/Gmail!`,
+          `✅ Welcome ${result.user.displayName}. You have successfully logged in Google!`,
         );
       })
       .catch((error) => {
@@ -84,11 +84,12 @@ const Login = () => {
       .then((result) => {
         console.log("GitHub User:", result.user);
         alert(
-          `✅ Welcome ${result.user.displayName} ! You have successfully logged in with GitHub.`,
+          `✅ Welcome ${result.user.name} ! You have successfully logged in with GitHub.`,
         );
       })
       .catch((error) => {
-        console.error("GitHub SignIn Error:", error.message);
+        console.error("GitHub SignIn Error:", error);
+        alert(error.message);
       });
   };
 
