@@ -7,7 +7,10 @@ import {
 } from "react-simple-captcha";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Chrome, Facebook, Github, Phone } from "lucide-react";
+// import { Chrome, Facebook, Github, Phone } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook, FaGithub, FaPhone } from "react-icons/fa";
+
 import {
   auth,
   googleProvider,
@@ -215,28 +218,28 @@ const Login = () => {
                   onClick={handleGoogleSignIn}
                   className="btn btn-outline btn-square"
                 >
-                  <Chrome className="w-5 h-5 text-red-500" />
+                  <FcGoogle className="w-6 h-6" />
                 </button>
 
                 <button
                   onClick={handleFacebookSignIn}
                   className="btn btn-outline btn-square"
                 >
-                  <Facebook className="w-5 h-5 text-blue-600" />
+                  <FaFacebook className="w-6 h-6 text-blue-600" />
                 </button>
 
                 <button
                   onClick={handleGithubSignIn}
                   className="btn btn-outline btn-square"
                 >
-                  <Github className="w-5 h-5 text-gray-900 dark:text-white" />
+                  <FaGithub className="w-6 h-6" />
                 </button>
                 {/* Phone */}
                 <button
                   onClick={handlePhoneLogin}
                   className="btn btn-outline btn-square hover:bg-green-50 transition"
                 >
-                  <Phone className="w-5 h-5 text-green-600" />
+                  <FaPhone className="w-5 h-5 text-green-600" />
                 </button>
               </div>
             </div>
