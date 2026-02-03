@@ -13,7 +13,7 @@ import {
   googleProvider,
   facebookProvider,
   githubProvider,
-} from "../../firebase.config";
+} from "../../firebase/firebase.config";
 import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
