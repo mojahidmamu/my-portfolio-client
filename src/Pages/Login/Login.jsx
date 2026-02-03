@@ -7,14 +7,18 @@ import {
 } from "react-simple-captcha";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Chrome, Facebook, Github } from "lucide-react";
+import { Chrome, Facebook, Github, Phone } from "lucide-react";
 import {
   auth,
   googleProvider,
   facebookProvider,
   githubProvider,
 } from "../../firebase/firebase.config";
-import { signInWithPopup } from "firebase/auth";
+import {
+  signInWithPopup,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+} from "firebase/auth";
 
 const Login = () => {
   const capthchaRef = useRef(null);
@@ -48,7 +52,9 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log("Google User:", result.user);
-        alert(`Welcome ${result.user.displayName}. You have successfully logged in Google/Gmail!`);
+        alert(
+          `✅ Welcome ${result.user.displayName}. You have successfully logged in Google/Gmail!`,
+        );
       })
       .catch((error) => {
         console.error("Google SignIn Error:", error.message);
@@ -60,7 +66,9 @@ const Login = () => {
     signInWithPopup(auth, facebookProvider)
       .then((result) => {
         console.log("Facebook User:", result.user);
-        alert(`Welcome ${result.user.displayName} ! You have successfully logged in with Facebook.`);
+        alert(
+          `✅ Welcome ${result.user.displayName} ! You have successfully logged in with Facebook.`,
+        );
       })
       .catch((error) => {
         console.error("Facebook SignIn Error:", error.message);
@@ -72,11 +80,52 @@ const Login = () => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         console.log("GitHub User:", result.user);
-        alert(`Welcome ${result.user.displayName} ! You have successfully logged in with GitHub.`);
+        alert(
+          `✅ Welcome ${result.user.displayName} ! You have successfully logged in with GitHub.`,
+        );
       })
       .catch((error) => {
         console.error("GitHub SignIn Error:", error.message);
       });
+  };
+
+  // Phone Login
+  const handlePhoneLogin = async () => {
+    try {
+      const phoneNumber = prompt(
+        "Enter phone number with country code\nExample: +8801XXXXXXXXX",
+      );
+
+      if (!phoneNumber) return;
+
+      // create recaptcha
+      window.recaptchaVerifier = new RecaptchaVerifier(
+        "recaptcha-container",
+        { size: "normal" },
+        auth,
+      );
+
+      const appVerifier = window.recaptchaVerifier;
+
+      // send OTP SMS
+      const confirmationResult = await signInWithPhoneNumber(
+        auth,
+        phoneNumber,
+        appVerifier,
+      );
+
+      const otp = prompt("Enter OTP sent to your phone");
+      if (!otp) return;
+
+      // verify OTP (ONLY ONCE)
+      const result = await confirmationResult.confirm(otp);
+
+      console.log("Logged in user:", result.user);
+      alert("✅ Phone login success!");
+    } catch (error) {
+      console.error("PHONE LOGIN ERROR:", error.code, error.message);
+      alert(error.message);
+    }
   };
 
   return (
@@ -182,8 +231,17 @@ const Login = () => {
                 >
                   <Github className="w-5 h-5 text-gray-900 dark:text-white" />
                 </button>
+                {/* Phone */}
+                <button
+                  onClick={handlePhoneLogin}
+                  className="btn btn-outline btn-square hover:bg-green-50 transition"
+                >
+                  <Phone className="w-5 h-5 text-green-600" />
+                </button>
               </div>
             </div>
+            {/*  */}
+            <div id="recaptcha-container"></div>
           </div>
         </div>
       </div>

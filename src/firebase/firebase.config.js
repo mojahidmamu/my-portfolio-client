@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
   GithubAuthProvider,
+  PhoneAuthProvider
 } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -30,3 +31,4 @@ export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export const facebookProvider = new FacebookAuthProvider();
 export const githubProvider = new GithubAuthProvider();
+export const phoneProvider = new PhoneAuthProvider();  
