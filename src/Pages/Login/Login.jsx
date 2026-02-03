@@ -129,29 +129,28 @@ const Login = () => {
 
             {/* Login with google and facebook and Github */}
             <div className="card-body px-3">
-              <button
-                onClick={handleGoogleSignIn}
-                className="btn btn-outline w-full mb-4 flex items-center gap-2"
-              >
-                <Chrome className="w-5 h-5" />
-                Continue with Google
-              </button>
+              <div className="flex items-center justify-center gap-4">
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="btn btn-outline btn-square"
+                >
+                  <Chrome className="w-5 h-5 text-red-500" />
+                </button>
 
-              <button
-                onClick={handleFacebookSignIn}
-                className="btn btn-outline w-full mb-4 flex items-center gap-2"
-              >
-                <Facebook className="w-5 h-5" />
-                Continue with Facebook
-              </button>
+                <button
+                  onClick={handleFacebookSignIn}
+                  className="btn btn-outline btn-square"
+                >
+                  <Facebook className="w-5 h-5 text-blue-600" />
+                </button>
 
-              <button
-                onClick={handleGithubSignIn}
-                className="btn btn-outline w-full flex items-center gap-2"
-              >
-                <Github className="w-5 h-5" />
-                Continue with Github
-              </button>
+                <button
+                  onClick={handleGithubSignIn}
+                  className="btn btn-outline btn-square"
+                >
+                  <Github className="w-5 h-5 text-gray-900 dark:text-white" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
