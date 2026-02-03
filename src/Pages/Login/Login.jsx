@@ -8,6 +8,13 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Chrome, Facebook, Github } from "lucide-react";
+import {
+  auth,
+  googleProvider,
+  facebookProvider,
+  githubProvider,
+} from "../../firebase.config";
+import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
   const capthchaRef = useRef(null);
@@ -36,18 +43,42 @@ const Login = () => {
   };
 
   // Google Facebook Github Login Functionality
+  // Google Login
   const handleGoogleSignIn = () => {
-    // Google sign-in logic here
-    console.log("Google sign-in clicked");
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        console.log("Google User:", result.user);
+        alert(`Welcome ${result.user.displayName}`);
+      })
+      .catch((error) => {
+        console.error("Google SignIn Error:", error.message);
+      });
   };
+
+  // Facebook Login
   const handleFacebookSignIn = () => {
-    // Facebook sign-in logic here
-    console.log("Facebook sign-in clicked");
+    signInWithPopup(auth, facebookProvider)
+      .then((result) => {
+        console.log("Facebook User:", result.user);
+        alert(`Welcome ${result.user.displayName}`);
+      })
+      .catch((error) => {
+        console.error("Facebook SignIn Error:", error.message);
+      });
   };
+
+  // GitHub Login
   const handleGithubSignIn = () => {
-    // Github sign-in logic here
-    console.log("Github sign-in clicked");
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        console.log("GitHub User:", result.user);
+        alert(`Welcome ${result.user.displayName}`);
+      })
+      .catch((error) => {
+        console.error("GitHub SignIn Error:", error.message);
+      });
   };
+
   return (
     <div>
       <Helmet>
