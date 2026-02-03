@@ -48,7 +48,7 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log("Google User:", result.user);
-        alert(`Welcome ${result.user.displayName}`);
+        alert(`Welcome ${result.user.displayName}. You have successfully logged in!`);
       })
       .catch((error) => {
         console.error("Google SignIn Error:", error.message);
@@ -134,7 +134,7 @@ const Login = () => {
                   onClick={handleValidateCaptcha}
                   className="btn btn-outline btn-xs mt-2"
                 >
-                  Validata
+                  Valid Captcha
                 </button>
               </div>
               <div className="form-control mt-6">
