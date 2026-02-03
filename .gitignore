@@ -22,6 +22,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-firebase-debug.*.js
-firebase-debug.*.json
+firebase.config.js 
