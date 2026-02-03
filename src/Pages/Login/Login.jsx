@@ -7,6 +7,7 @@ import {
 } from "react-simple-captcha";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Chrome, Facebook, Github } from "lucide-react";
 
 const Login = () => {
   const capthchaRef = useRef(null);
@@ -33,6 +34,19 @@ const Login = () => {
     // }
   };
 
+  // Google Facebook Github Login Functionality
+  const handleGoogleSignIn = () => {
+    // Google sign-in logic here
+    console.log("Google sign-in clicked");
+  };
+  const handleFacebookSignIn = () => {
+    // Facebook sign-in logic here
+    console.log("Facebook sign-in clicked");
+  };
+  const handleGithubSignIn = () => {
+    // Github sign-in logic here
+    console.log("Github sign-in clicked");
+  };
   return (
     <div>
       <Helmet>
@@ -112,6 +126,33 @@ const Login = () => {
               </p>
             </form>
             <div className="divider">Or sign in with</div>
+
+            {/* Login with google and facebook and Github */}
+            <div className="card-body px-3">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn btn-outline w-full mb-4 flex items-center gap-2"
+              >
+                <Chrome className="w-5 h-5" />
+                Continue with Google
+              </button>
+
+              <button
+                onClick={handleFacebookSignIn}
+                className="btn btn-outline w-full mb-4 flex items-center gap-2"
+              >
+                <Facebook className="w-5 h-5" />
+                Continue with Facebook
+              </button>
+
+              <button
+                onClick={handleGithubSignIn}
+                className="btn btn-outline w-full flex items-center gap-2"
+              >
+                <Github className="w-5 h-5" />
+                Continue with Github
+              </button>
+            </div>
           </div>
         </div>
       </div>
