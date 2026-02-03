@@ -48,7 +48,7 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log("Google User:", result.user);
-        alert(`Welcome ${result.user.displayName}. You have successfully logged in!`);
+        alert(`Welcome ${result.user.displayName}. You have successfully logged in Google/Gmail!`);
       })
       .catch((error) => {
         console.error("Google SignIn Error:", error.message);
@@ -60,7 +60,7 @@ const Login = () => {
     signInWithPopup(auth, facebookProvider)
       .then((result) => {
         console.log("Facebook User:", result.user);
-        alert(`Welcome ${result.user.displayName}`);
+        alert(`Welcome ${result.user.displayName} ! You have successfully logged in with Facebook.`);
       })
       .catch((error) => {
         console.error("Facebook SignIn Error:", error.message);
@@ -72,7 +72,7 @@ const Login = () => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         console.log("GitHub User:", result.user);
-        alert(`Welcome ${result.user.displayName}`);
+        alert(`Welcome ${result.user.displayName} ! You have successfully logged in with GitHub.`);
       })
       .catch((error) => {
         console.error("GitHub SignIn Error:", error.message);
