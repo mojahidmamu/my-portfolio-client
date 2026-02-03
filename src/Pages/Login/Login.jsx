@@ -26,12 +26,13 @@ const Login = () => {
   };
 
   const handleValidateCaptcha = () => {
-    const value = capthchaRef.current.value;
-    // if (validateCaptcha(value)) {
-    //   disabled(false);
-    // } else {
-    //   disabled(true);
-    // }
+    const value = captchaRef.current.value;
+    if (validateCaptcha(value)) {
+      setDisabled(false); // enable login
+    } else {
+      setDisabled(true); // disable login
+      alert("Captcha is incorrect!");
+    }
   };
 
   // Google Facebook Github Login Functionality
@@ -125,7 +126,7 @@ const Login = () => {
                 </span>
               </p>
             </form>
-            <div className="divider">Or sign in with</div>
+            <div className="divider">Or Login with</div>
 
             {/* Login with google and facebook and Github */}
             <div className="card-body px-3">
