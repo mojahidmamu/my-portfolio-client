@@ -190,7 +190,7 @@ const Login = () => {
                   Valid Captcha
                 </button>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control mt-1">
                 <button
                   // disabled={disabled}
                   onClick={handleLogin}
@@ -210,7 +210,7 @@ const Login = () => {
                 </span>
               </p>
             </form>
-            <div className="divider">Or Login with</div>
+            <div className="divider mb-[-10px] mt-[-10px]">Or Login with</div>
 
             {/* Login with google and facebook and Github */}
             <div className="card-body px-3">
