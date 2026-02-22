@@ -10,8 +10,19 @@ import Bangladesh from "../../assets/Project-img/Bangladesh.png";
 import Selon from "../../assets/Project-img/Selon.png";
 
 export const projectsData = [
+  // next project will here,,, from 12...
   {
-    id: 1,
+    id: 11,
+    title: "Swift_SHOP",
+    description:
+      " “Swift mini_Shop is a sleek and user-friendly e-commerce platform for quick browsing and shopping, offering a smooth experience with essential features for buyers.”",
+    image: Flower,
+    topics: ["HTML5", "CSS", "Tailwind CSS", "JSON", "API", "CRUD"],
+    live: "https://swift-shop-five.vercel.app/",
+    code: "https://github.com/mojahidmamu/Swift_SHOP",
+  },
+  {
+    id: 10,
     title: "Always Fresh Flower",
     description:
       "A fully responsive flower shop landing page built using HTML5 and Tailwind CSS. This project was created as part of an assignment and follows all requirements provided via Figma design.",
@@ -21,7 +32,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/FAUGEI",
   },
   {
-    id: 2,
+    id: 9,
     title: "Coffee Store",
     description:
       " It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back! Your companion of every moment! Enjoy the beautiful moments and make them memorable.",
@@ -31,7 +42,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/COFFEE-STORE",
   },
   {
-    id: 3,
+    id: 8,
     title: "PH Tube",
     description:
       "PH Tube is a web-based video streaming application where users can browse and watch videos sorted by categories such as music, comedy, and tutorials.",
@@ -41,7 +52,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/PH-TUBE",
   },
   {
-    id: 4,
+    id: 7,
     title: "ENGLISH Janala Project",
     description:
       " “English Janala is an interactive web platform designed to help learners improve their English skills through lessons, exercises, and practice activities, focusing on reading, writing, and grammar.” ",
@@ -59,7 +70,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/ENGLISH-Janala-PROJECT",
   },
   {
-    id: 5,
+    id: 6,
     title: "New Game",
     description:
       " It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back! Your companion of every moment! Enjoy the beautiful moments and make them memorable.",
@@ -69,7 +80,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/New-Game",
   },
   {
-    id: 6,
+    id:5,
     title: "Payoo NAGAD",
     description:
       " “Payoo Nagad is a digital financial app that allows users to add money, transfer funds, pay bills, and track transaction history with a secure PIN-based system, simulating real-world mobile banking functionality.” ",
@@ -79,7 +90,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/Payoo-NAGAD",
   },
   {
-    id: 7,
+    id: 4,
     title: "Kids School",
     description:
       " “Empowering students from small age towards vision With the courage, Confidence, Creativity and Compassion to make  their Unique Contribution in a Diverse and Dynamic World.” ",
@@ -89,7 +100,7 @@ export const projectsData = [
     code: "https://kids-school-ten.vercel.app/",
   },
   {
-    id: 8,
+    id: 3,
     title: "Pillars of “Bangladesh 2.0” ",
     description:
       " Idea , innovation , vision and challenges in New Bangladesh. ",
@@ -99,7 +110,7 @@ export const projectsData = [
     code: "hhttps://github.com/mojahidmamu/Bangladesh-2.0",
   },
   {
-    id: 9,
+    id: 2,
     title: "AUCTION Gallery",
     description:
       "Bid in Unique Items from Around the World. Discover rare collectibles, luxury goods and vintage treasures in our curated auctions. ",
@@ -109,7 +120,7 @@ export const projectsData = [
     code: "https://github.com/mojahidmamu/AUCTION-GALLERY",
   },
   {
-    id: 10,
+    id: 1,
     title: "Subro Selon Project",
     description:
       "Bid in Unique Items from Around the World. Discover rare collectibles, luxury goods and vintage treasures in our curated auctions. ",
