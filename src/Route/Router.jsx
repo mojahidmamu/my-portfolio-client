@@ -4,11 +4,13 @@ import Home from "../Pages/Homes/Home/Home";
 import AboutMe from "../Pages/AboutMe/AboutMe";
 import Projects from "../Pages/Projects/Projects"; 
 import Contact from "../Pages/Contact/Contact";
-import Dashboard from "../Layout/Dashboard";
-import Register from "../Pages/Register/Register";
-import Login from "../Pages/Login/Login";
+// import Dashboard from "../Layout/Dashboard";
+// import Register from "../Pages/Register/Register";
+// import Login from "../Pages/Login/Login";
 import Blog from "../Pages/FeautureBlog/Blog";
 import BlogDetailsCard from "../Pages/FeautureBlog/BlogDetailsCard";
+import MySkill from "../Pages/MySkill/MySkill";
+import Education from "../Pages/Education/Education";
 
 export const router = createBrowserRouter([
   {
@@ -24,12 +26,20 @@ export const router = createBrowserRouter([
           element: <AboutMe></AboutMe>,
         },
         {
+          path: '/skill', 
+          element: <MySkill></MySkill>,
+        },
+        {
           path: '/projects',
           element: <Projects></Projects>,
         },
         {
           path: "/blogs",
           element: <Blog></Blog>,
+        },
+        {
+          path: "/education", 
+          element: <Education></Education>,
         },
         {
           path: "/blogs/:id",
@@ -39,18 +49,18 @@ export const router = createBrowserRouter([
           path: "/contact",
           element: <Contact></Contact>,
         },
-        {
-          path: "/dashboard",
-          element: <Dashboard></Dashboard>,
-        },
-        {
-          path: "/register",
-          element: <Register></Register>,
-        },
-        {
-          path: '/login',
-          element: <Login></Login>,
-        },
+        // {
+        //   path: "/dashboard",
+        //   element: <Dashboard></Dashboard>,
+        // },
+        // {
+        //   path: "/register",
+        //   element: <Register></Register>,
+        // },
+        // {
+        //   path: '/login',
+        //   element: <Login></Login>,
+        // },
     ],
   },
 ]);

@@ -37,6 +37,14 @@ const NavBar = () => {
       </li>
       <li>
         <Link
+          to="/skill"
+          className="hover:text-purple-400 transition-colors duration-200"
+        >
+         Skills
+        </Link>
+      </li>
+      <li>
+        <Link
           to="/projects"
           className="hover:text-purple-400 transition-colors duration-200"
         >
@@ -45,10 +53,10 @@ const NavBar = () => {
       </li>
       <li>
         <Link
-          to="/blogs"
+          to="/education"
           className="hover:text-purple-400 transition-colors duration-200"
         >
-          Blogs
+          Education
         </Link>
       </li>
       <li>
@@ -59,20 +67,20 @@ const NavBar = () => {
           Contact
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
           to="/dashboard"
           className="hover:text-purple-400 transition-colors duration-200"
         >
           Dashboard
         </Link>
-      </li>
+      </li> */}
     </>
   );
 
   return (
     <>
-      <div className="navbar mt-15 fixed z-10 bg-black bg-opacity-50 text-gray-100 max-w-screen-lg">
+      <div className="navbar mt-15 fixed z-10 bg-black bg-opacity-50 text-gray-100  w-full">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -133,7 +141,7 @@ const NavBar = () => {
             <Moon className="absolute top-2 left-2 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-purple-400" />
           </button>
 
-          <Link
+          {/* <Link
             to="/login"
             className="font-bold text-gray-100 hover:text-purple-400 transition-colors duration-200"
           >
@@ -144,6 +152,12 @@ const NavBar = () => {
             className="btn btn-accent btn-active rounded-lg font-bold text-white hover:bg-purple-600"
           >
             Register
+          </Link> */}
+           <Link
+            to="/blogs"
+            className="btn btn-accent btn-active rounded-lg font-bold text-white hover:bg-purple-600"
+          >
+           Blogs
           </Link>
         </div>
       </div>
