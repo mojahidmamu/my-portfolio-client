@@ -8,14 +8,35 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaLinkedin,
+  FaGithub, 
+  FaFacebook, 
 } from "react-icons/fa";
+import { SiCodeforces } from "react-icons/si"; // Codeforces icon
 
 const contactItems = [
   {
-    icon: <FaLinkedin />,
+    icon: <FaGithub />,
     text: "Mojahid-mamu",
+    label: "Github",
+    link: "https://github.com/mojahidmamu",
+  },
+  {
+    icon: <FaLinkedin />,
+    text: "Abdullah all Mojahid",
     label: "LinkedIn",
     link: "https://www.linkedin.com/in/abdullah-all-mojahid-a8a57b329",
+  },
+  {
+    icon: <FaFacebook />,
+    text: "Connect with me in Facebook",
+    label: "Facebook",
+    link: "https://www.facebook.com/abdullah.all.mojahid.2024",
+  },
+  {
+    icon: <SiCodeforces />,
+    text: "Mojahid",
+    label: "Codeforces",
+    link: "https://codeforces.com/profile/Abdullah_all_Mojahid",
   },
   {
     icon: <FaEnvelope />,
@@ -76,9 +97,9 @@ const Contact = () => {
         {/* Left - Header / Text */}
         <div className="md:w-1/2 flex flex-col justify-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-center md:text-left">
-            <span className="text-slate-900 dark:text-white">Let's </span>
+            <span className="text-slate-900 dark:text-white">Let's Connect </span>
             <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
-              Connect
+              with me
             </span>
           </h2>
 
@@ -94,9 +115,9 @@ const Contact = () => {
           </p>
 
           {/* Contact List */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {contactItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 group mt-16">
+              <div key={index} className="flex items-center gap-4 group mt-4">
                 {/* Icon Box */}
                 <div
                   className="w-12 h-12 mt-3 flex items-center justify-center rounded-2xl 
@@ -112,20 +133,20 @@ const Contact = () => {
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-500/70">
                     {item.label}
                   </p>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-slate-800 dark:text-white hover:text-teal-500 transition-colors duration-200"
-                    >
-                      {item.text}
-                    </a>
-                  ) : (
-                    <p className="font-medium text-slate-800 dark:text-white">
-                      {item.text}
-                    </p>
-                  )}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-slate-800 dark:text-white hover:text-teal-500 transition-colors duration-200"
+                      >
+                        {item.text}
+                      </a>
+                    ) : (
+                      <p className="font-medium text-slate-800 dark:text-white">
+                        {item.text}
+                      </p>
+                    )}
                 </div>
               </div>
             ))}
@@ -195,14 +216,15 @@ const Contact = () => {
             </button>
           </form>
 
-          {/* Success Message UI */}
+         {/* Success Message UI */}
           {sent && (
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="flex gap-3 p-5 rounded-xl bg-green-50 border border-green-200 shadow-md mt-4"
+              exit={{ y: -50, opacity: 0 }}
+              className="fixed top-4 left-1/2 -translate-x-1/2 flex gap-3 p-4 rounded-xl bg-green-50 border border-green-200 shadow-md z-50"
             >
-              <CheckCircle className="text-green-600" />
+              <CheckCircle className="text-green-600 text-2xl" />
               <div>
                 <p className="font-semibold text-green-700">
                   Message sent successfully!
