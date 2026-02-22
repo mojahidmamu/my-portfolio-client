@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { FaDownload, FaGithub } from "react-icons/fa";
+import { FaDownload, FaGithub,FaLinkedin,  FaFacebook } from "react-icons/fa";
 import Profile from "../../assets/home/Profile-image.jpg";
 import myCV from "../../assets/home/Abdullah_Al_Mojahid_Resume.pdf"
 
@@ -59,7 +59,7 @@ const AboutMe = () => {
         <div className="md:w-7/12 w-full">
           {/* Header */}
           <div className="space-y-4 mb-10">
-            <h2 className="text-4xl md:text-5xl font-extrabold">
+            <h2 className="text-4xl md:text-5xl mt-8 font-extrabold">
               <span className="text-slate-900 dark:text-white">About </span>
               <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
                 Me
@@ -142,15 +142,15 @@ const AboutMe = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-2"
           >
             {/* Download */}
             <a
               href={myCV}
               download
-              className="flex items-center gap-3 
+              className="flex items-center gap-2 
   bg-gradient-to-r from-indigo-600 to-purple-600
-  text-white px-8 py-4 rounded-full font-semibold
+  text-white px-6 py-4 rounded-full font-semibold
   shadow-lg hover:shadow-purple-500/40
   hover:-translate-y-1 transition-all duration-300"
             >
@@ -171,6 +171,32 @@ const AboutMe = () => {
               hover:-translate-y-1 transition-all duration-300"
             >
               <FaGithub className="text-xl" /> GitHub
+            </a>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/abdullah-all-mojahid-a8a57b329/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 
+                bg-blue-800 text-white
+                px-8 py-4 rounded-full font-semibold
+                hover:bg-blue-900 hover:-translate-y-1
+                transition-all duration-300"
+            >
+              <FaLinkedin className="text-xl" /> LinkedIn
+            </a>
+             {/* Facebook */}
+            <a
+              href="https://www.facebook.com/abdullah.all.mojahid.2024"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 
+                bg-blue-600 text-white
+                px-8 py-4 rounded-full font-semibold
+                hover:bg-blue-700 hover:-translate-y-1
+                transition-all duration-300"
+            >
+              <FaFacebook className="text-xl" /> Facebook
             </a>
           </motion.div>
         </div>

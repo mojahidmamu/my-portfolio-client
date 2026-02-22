@@ -7,6 +7,7 @@ import Projects from "../../Projects/Projects";
 import Contact from "../../Contact/Contact";
 import BuildTogether from "../../BuildTogether/BuildTogether";
 import FAQ from "../../FAQ/FAQ";
+import Education from "../../Education/Education";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <AboutMe></AboutMe>
       <MySkill></MySkill>
       <Projects></Projects>
+      <Education></Education>
       <ClientFeedback></ClientFeedback>
       <FAQ></FAQ>
       <Contact></Contact>
