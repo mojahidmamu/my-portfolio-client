@@ -8,6 +8,7 @@ import kid from "../../assets/Project-img/Kids.jpg";
 import Auction from "../../assets/Project-img/Auction-Gallery.jpg";
 import Bangladesh from "../../assets/Project-img/Bangladesh.png";
 import Selon from "../../assets/Project-img/Selon.png";
+import Swift_SHOP from "../../assets/Project-img/Swift Shop.png"
 
 export const projectsData = [
   // next project will here,,, from 12...
@@ -16,7 +17,7 @@ export const projectsData = [
     title: "Swift_SHOP",
     description:
       " “Swift mini_Shop is a sleek and user-friendly e-commerce platform for quick browsing and shopping, offering a smooth experience with essential features for buyers.”",
-    image: Flower,
+    image: Swift_SHOP,
     topics: ["HTML5", "CSS", "Tailwind CSS", "JSON", "API", "CRUD"],
     live: "https://swift-shop-five.vercel.app/",
     code: "https://github.com/mojahidmamu/Swift_SHOP",
