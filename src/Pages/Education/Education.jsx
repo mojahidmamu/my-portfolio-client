@@ -7,27 +7,30 @@
 
     const Education = () => {
     return (
-        <div id="education"  className="my-14   px-4 bg-base-200 border-b-4 border-purple-500 transition-colors duration-300">
-       {/* Header */}
-        <div className="max-w-4xl mx-auto text-center space-y-4 mb-8 mt-2">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            <span className="text-slate-900 dark:text-white">Educational </span>
-            <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
-            Qualification
-            </span>
-        </h2>
+        <div id="education" className="py-20 px-6 md:px-12 lg:px-20 bg-gray-50 dark:bg-gray-900 min-h-screen">
+           
+            {/* Header */}
+            <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+                    <span className="text-slate-900 dark:text-white">Educational </span>
+                    <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 bg-clip-text text-transparent">
+                    Qualification
+                    </span>
+                </h2>
 
-        {/* Gradient Underline */}
-        <div className="flex justify-center mt-2">
-            <span className="h-1 w-32 md:w-40 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 animate-pulse"></span>
-        </div>
+            {/* Gradient Underline */}
+            <div className="flex justify-center ">
+                <span className="h-1 w-32 md:w-40 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-teal-400 animate-pulse"></span>
+            </div>
 
-        {/* Optional Subtext */}
-        <p className="text-gray-500 dark:text-gray-300 mt-2 text-sm md:text-base">
-            Here’s a summary of my academic journey and milestones.
-        </p>
-        </div>
+            {/* Optional Subtext */}
+            <p className="text-gray-500 dark:text-gray-300 mt-2 text-sm md:text-base">
+                Here’s a summary of my academic journey and milestones.
+            </p>
+            </div>
 
+
+            
         <VerticalTimeline>
             {/* Educational Item 1 */}
             <VerticalTimelineElement
@@ -126,6 +129,8 @@
             </ul>
             </VerticalTimelineElement>
         </VerticalTimeline>
+
+
         </div>
     );
     };
