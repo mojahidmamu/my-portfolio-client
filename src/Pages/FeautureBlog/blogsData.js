@@ -2,30 +2,31 @@ import blog1 from "../../assets/Blog-image/Ecommerce_pic.png";
 import blog2 from "../../assets/Blog-image/ManageMate.png";
 import blog3 from "../../assets/Blog-image/Volunteer-management.png";
 import blog4 from "../../assets/Blog-image/Digital-wallet.png";
+import Hackthon from "../../assets/Blog-image/Hackthon.png";
 
 export const blogs = [
   {
     id: 1,
-    title: "Ecommerce Platform",
-    excerpt: "Full stack ecommerce system with payment and dashboard.",
-    image: blog1,
+    title: "National Hackthon in IIUC-2025",
+    excerpt: "I proudly participated in the National Hackathon in IIUC – 15.11.2025, organized by International Islamic University Chittagong (IIUC) and presented by Programming Hero. This national-level hackathon brought together talented developers, problem solvers, and innovators from different institutions across Bangladesh. The competition focused on building impactful, real-world solutions within a limited timeframe.",
+    image: Hackthon,
   },
   {
     id: 2,
-    title: "ManageMate App",
-    excerpt: "Task and team management web application.",
+    title: "Robotics Club Champion 2025 in BSPI ",
+    excerpt: "Achieved the title of Robotics Club Champion 2025 at Bangladesh Sweden Polytechnic Institute (BSPI) by securing top position in an inter-institution competition held within our institute. This accomplishment highlights my strong problem-solving skills, technical creativity, and ability to work effectively under competitive pressure. The experience enhanced my teamwork, innovation mindset, and practical understanding of robotics and technology-based solutions.",
     image: blog2,
   },
   {
     id: 3,
-    title: "Volunteer System",
-    excerpt: "Volunteer registration and tracking platform.",
+    title: "Github commit history in 2025",
+    excerpt: "In 2025, I maintained strong consistency on GitHub, making 3,500+ code contributions while focusing on daily practice, real-world projects, and strengthening core computer science fundamentals. My activity reflects continuous learning, steady improvement, and growth in web development, Data Structures & Algorithms, and problem-solving. More than numbers, this milestone represents discipline, persistence, and my commitment to becoming a skilled software developer through the mindset of Learn. Build. Improve. Repeat. 🚀",
     image: blog3,
   },
   {
     id: 4,
-    title: "Digital Wallet",
-    excerpt: "Secure wallet with transaction features.",
+    title: "NSDA ITS-RPL-(Level-3) in-2026",
+    excerpt: "Earned RPL (Recognition of Prior Learning) Level-3 Certification on 03.01.2026, validating my practical experience, hands-on technical knowledge, and strong problem-solving abilities. This certification recognizes my competency in applying real-world skills effectively and reflects my commitment to continuous improvement and professional development in the field of technology.",
     image: blog4,
   },
 ];

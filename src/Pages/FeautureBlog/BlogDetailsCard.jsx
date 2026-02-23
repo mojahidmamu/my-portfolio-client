@@ -45,7 +45,8 @@ const BlogDetailsCard = () => {
                   year: "numeric",
                 })
               : "-"}{" "}
-            • {views} views
+            • 
+            {/* {views} views */}
           </p>
         </div>
       </div>

@@ -79,10 +79,10 @@
             }
             >
             <h3 className="text-[#3F51B5] text-[20px] font-bold">
-            Secondary Secondary Certificate
+            Secondary Secondary Certificate-[SSC]
             </h3>
             <p className="text-[#303F9F] text-[16px] font-semibold mb-4">
-                Illishia Jamila Begum Hish School-[SSC]
+                Illishia Jamila Begum Hish School
             </p>
             <ul className="list-disc ml-5 space-y-2 ">
                 <li className="text-[#303F9F] text-[14px] mt-2">
