@@ -64,7 +64,7 @@ const BlogDetailsCard = () => {
 
       {/* Content */}
       <article className="prose prose-lg max-w-none text-gray-700 mt-8 font-semibold mb-14">
-        <p>{blog.content ?? blog.excerpt}</p>
+        <p><span className="font-bold  underline text-xl">Description:</span> {blog.content ?? blog.excerpt}</p>
       </article>
     </main>
   );
