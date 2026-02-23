@@ -2,10 +2,10 @@
 // import blog2 from "../../assets/Blog-image/ManageMate.png";
 // import blog3 from "../../assets/Blog-image/Volunteer-management.png";
 // import blog4 from "../../assets/Blog-image/Digital-wallet.png";
-import Hackthon from "../../assets/Blog-image/Hackthon.png";
-import Robotics  from "../../assets/Blog-image/Robotics.png";
-import Github  from "../../assets/Blog-image/Github.png";
-import NSDA  from "../../assets/Blog-image/Github.png";
+import Hackthon from "../../assets/Blog-image/Hackthon.jpeg";
+import Robotics  from "../../assets/Blog-image/Robotics.jpeg";
+import Github  from "../../assets/Blog-image/Github.jpeg";
+import NSDA  from "../../assets/Blog-image/NSDA.jpg";
 
 export const blogs = [
   {
@@ -30,6 +30,6 @@ export const blogs = [
     id: 4,
     title: "NSDA ITS-RPL-(Level-3) in-2026",
     excerpt: "Earned RPL (Recognition of Prior Learning) Level-3 Certification on 03.01.2026, validating my practical experience, hands-on technical knowledge, and strong problem-solving abilities. This certification recognizes my competency in applying real-world skills effectively and reflects my commitment to continuous improvement and professional development in the field of technology.",
-    image: NSDA,
+    image: NSDA, 
   },
 ];

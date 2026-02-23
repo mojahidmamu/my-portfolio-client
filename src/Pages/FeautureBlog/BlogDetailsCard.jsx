@@ -53,14 +53,14 @@ const BlogDetailsCard = () => {
 
       {/* Cover Image */}
       {blog.image && (
-        <div className="relative h-80 w-full overflow-hidden mb-6 rounded-lg shadow-md">
-          <img
-            src={blog.image}
-            alt={blog.title}
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-      )}
+      <div className="w-full mb-6 rounded-lg shadow-md">
+        <img
+          src={blog.image}
+          alt={blog.title}
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+)}
 
       {/* Content */}
       <article className="prose prose-lg max-w-none text-gray-700 mt-8 font-semibold mb-14">
