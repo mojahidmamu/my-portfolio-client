@@ -4,7 +4,7 @@
 // import blog4 from "../../assets/Blog-image/Digital-wallet.png";
 import Hackthon from "../../assets/Blog-image/Hackthon.jpeg";
 import Robotics  from "../../assets/Blog-image/Robotics.jpeg";
-import Github  from "../../assets/Blog-image/Github.jpeg";
+import Github  from "../../assets/Blog-image/Github.jpg";
 import NSDA  from "../../assets/Blog-image/NSDA.jpg";
 
 export const blogs = [
