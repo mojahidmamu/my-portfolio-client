@@ -4,6 +4,8 @@
     VerticalTimelineElement,
     } from "react-vertical-timeline-component";
     import "react-vertical-timeline-component/style.min.css";
+    import BSPI from "../../assets/Educational Logo/BSPI.png";
+    import IJBHS from "../../assets/Educational Logo/IJBHS.jpeg";
 
     const Education = () => {
     return (
@@ -48,11 +50,12 @@
                 </div>
             }
             >
-            <h3 className="text-[#6A0DAD] text-[20px] font-bold">
-                Diploma in Computer Science
-            </h3>
+            <div className="flex items-center gap-2 mb-2">
+                <img src={BSPI} alt="BSPI Logo" className="w-16 h-16 object-contain" />
+                <h3 className="text-[#6A0DAD] text-[20px] font-bold">Diploma in Computer Science</h3>
+            </div>
             <p className="text-[#4B0082] text-[16px] font-semibold mb-4">
-                Bangladesh Sweden Polytechnic Institute
+                <span className="font-bold text-xl">Institute:</span> Bangladesh Sweden Polytechnic Institute
             </p>
             <ul className="list-disc ml-5 space-y-2">
                 <li className="text-[#4B0082] text-[14px]">
@@ -78,11 +81,14 @@
                 </div>
             }
             >
-            <h3 className="text-[#3F51B5] text-[20px] font-bold">
-            Secondary Secondary Certificate-[SSC]
-            </h3>
+         
+            {/*  */}
+             <div className="flex items-center gap-2 mb-2">
+                <img src={IJBHS} alt="IJBHS Logo" className="w-16 h-16 object-contain" />
+                <h3 className="text-[#3F51B5] text-[20px] font-bold"> Secondary Secondary Certificate-[SSC]  </h3>
+            </div>
             <p className="text-[#303F9F] text-[16px] font-semibold mb-4">
-                Illishia Jamila Begum Hish School
+                <span className="font-bold text-xl">School:</span> Illishia Jamila Begum Hish School
             </p>
             <ul className="list-disc ml-5 space-y-2 ">
                 <li className="text-[#303F9F] text-[14px] mt-2">
@@ -117,7 +123,7 @@
                 Primary School Certificate-[PSC]
             </h3>
             <p className="text-[#01579B] text-[16px] font-semibold mb-4">
-                Khan Shaheb Mokbul Ali Chy. Academy
+                <span className="font-bold text-xl">School:</span> Khan Shaheb Mokbul Ali Chy. Academy
             </p>
             <ul className="list-disc ml-5 space-y-2 mt-2">
                 <li className="text-[#01579B] text-[14px]">
