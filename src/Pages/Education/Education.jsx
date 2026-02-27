@@ -6,6 +6,7 @@
     import "react-vertical-timeline-component/style.min.css";
     import BSPI from "../../assets/Educational Logo/BSPI.png";
     import IJBHS from "../../assets/Educational Logo/IJBHS.jpeg";
+    import Primary_School from "../../assets/Educational Logo/KSMACA.png";
 
     const Education = () => {
     return (
@@ -119,9 +120,10 @@
                 </div>
             }
             >
-            <h3 className="text-[#0288D1] text-[20px] font-bold">
-                Primary School Certificate-[PSC]
-            </h3>
+            <div className="flex items-center gap-2 mb-2">
+                <img src={Primary_School} alt="Primary School Logo" className="w-16 h-16 object-contain" />
+                <h3 className="text-[#3F51B5] text-[20px] font-bold"> Primary School Certificate-[PSC]  </h3>
+            </div>
             <p className="text-[#01579B] text-[16px] font-semibold mb-4">
                 <span className="font-bold text-xl">School:</span> Khan Shaheb Mokbul Ali Chy. Academy
             </p>
